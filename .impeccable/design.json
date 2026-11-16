@@ -1,0 +1,75 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-11-16T00:00:00.000Z",
+  "title": "Design System: Fatah Portfolio",
+  "extensions": {
+    "colorMeta": {
+      "ground": {"role": "neutral", "displayName": "Ink Ground", "canonical": "#151312", "tonalRamp": ["#151312", "#1d1a19", "#292725", "#3a3634", "#54504d", "#756f6b", "#9a938e", "#c4bcb5", "#ffffff"]},
+      "ink": {"role": "neutral", "displayName": "Paper White", "canonical": "#ffffff", "tonalRamp": ["#151312", "#3b3938", "#5e5c5b", "#827f7e", "#a8a5a4", "#cdcac9", "#e8e6e5", "#ffffff"]},
+      "muted": {"role": "neutral", "displayName": "Muted Copy", "canonical": "#998f8f", "tonalRamp": ["#1a1717", "#2b2727", "#3f3b3b", "#5c5656", "#7a7373", "#998f8f", "#bbb2b2", "#ded8d8"]},
+      "ghost": {"role": "neutral", "displayName": "Ghost Heading Line", "canonical": "rgb(182 180 189 / 20%)", "tonalRamp": ["#151312", "#1d1b1c", "#262424", "#353334", "#454344", "#575557", "#6b696b", "#807e80"]},
+      "orange": {"role": "primary", "displayName": "Template Orange", "canonical": "#f46c38", "tonalRamp": ["#2b130a", "#4d2114", "#73321e", "#9c4327", "#cd5830", "#f46c38", "#ff8e63", "#ffc3aa"]},
+      "orange-strong": {"role": "primary", "displayName": "Accessible Orange", "canonical": "#ef6230", "tonalRamp": ["#2a1209", "#4b1e12", "#702d1b", "#953c23", "#c24f2b", "#ef6230", "#ff8558", "#ffbfa4"]},
+      "lime": {"role": "accent", "displayName": "Signal Lime", "canonical": "#c5ff41", "tonalRamp": ["#24290f", "#3d4519", "#5c6824", "#7f8f30", "#a0b93a", "#c5ff41", "#d7ff7b", "#ecffbb"]},
+      "field": {"role": "neutral", "displayName": "Field Surface", "canonical": "#292725", "tonalRamp": ["#151312", "#1d1b19", "#292725", "#3a3734", "#54504c", "#75706b", "#9a948d"]}
+    },
+    "typographyMeta": {
+      "display": {"displayName": "Two-Tone Engineer Lockup", "purpose": "Hero identity and section names; second line painted in the ghost colour."},
+      "body": {"displayName": "Work Copy", "purpose": "Role summaries, tool kinds, skill lists, and form labels."}
+    },
+    "shadows": [],
+    "motion": [
+      {"name": "dock-hover", "value": "140ms ease", "purpose": "Icon colour and background on hover only."},
+      {"name": "feature-arrow", "value": "160ms ease", "purpose": "Two-pixel diagonal nudge of the feature card arrow."},
+      {"name": "reduced-motion", "value": "prefers-reduced-motion: reduce", "purpose": "Disables all transitions and smooth scrolling."}
+    ],
+    "breakpoints": [
+      {"name": "narrow-desktop", "value": "1180px"},
+      {"name": "tablet-stack", "value": "1000px"},
+      {"name": "mobile", "value": "640px"}
+    ]
+  },
+  "components": [
+    {
+      "name": "Icon dock",
+      "kind": "custom",
+      "description": "Centred translucent pill holding five icon links to the page's sections.",
+      "html": "<nav class=\"ds-dock\" aria-label=\"Site sections\"><a href=\"#home\" aria-label=\"Home\"><svg width=\"24\" height=\"24\" aria-hidden=\"true\"><path d=\"M4 10.5 12 4l8 6.5V20H4z\" fill=\"none\" stroke=\"currentColor\"/></svg></a></nav>",
+      "css": ".ds-dock { position: absolute; top: 30px; left: 50%; transform: translateX(-50%); display: flex; align-items: center; gap: 18px; height: 48px; padding: 0 20px; border-radius: 16px; background: rgb(255 255 255 / 3%); } .ds-dock a { display: grid; place-items: center; width: 36px; height: 36px; color: #fff; }"
+    },
+    {
+      "name": "Profile card",
+      "kind": "custom",
+      "description": "Sticky white sheet carrying the portrait, name, bio, contact links, and language switch.",
+      "html": "<aside class=\"ds-profile\"><img src=\"/muhamad-fatah-rozaq.jpg\" alt=\"Muhamad Fatah Rozaq\" /><p class=\"name\">Muhamad Fatah Rozaq</p></aside>",
+      "css": ".ds-profile { position: sticky; top: 40px; display: flex; flex-direction: column; align-items: center; gap: 22px; width: 344px; padding: 30px 20px; border-radius: 16px; background: #fff; color: #151312; text-align: center; overflow: hidden; } .ds-profile img { width: 240px; height: 284px; border-radius: 16px; object-fit: cover; } .ds-profile .name { font: 700 22px/1.15 Poppins, sans-serif; }"
+    },
+    {
+      "name": "Feature card",
+      "kind": "custom",
+      "description": "Saturated panel with a mark, a 24px statement, and a bordered arrow.",
+      "html": "<a class=\"ds-feature\" href=\"#experience\"><span aria-hidden=\"true\">✳</span><p>BUSINESS INTELLIGENCE, SALES FORCE AUTOMATION</p><span aria-hidden=\"true\" class=\"arrow\">↗</span></a>",
+      "css": ".ds-feature { position: relative; display: flex; flex-direction: column; gap: 24px; min-height: 240px; padding: 40px 20px 22px; border-radius: 10px; background: #ef6230; color: #fff; } .ds-feature p { margin: 0; font: 500 24px/1.1 Poppins, sans-serif; } .ds-feature .arrow { position: absolute; right: 20px; bottom: 22px; display: grid; place-items: center; width: 32px; height: 32px; border: 1px solid currentColor; border-radius: 8px; opacity: .65; }"
+    },
+    {
+      "name": "Submit",
+      "kind": "custom",
+      "refersTo": "submit",
+      "description": "Full-width orange action that composes a mail draft.",
+      "html": "<button class=\"ds-submit\" type=\"submit\">Submit</button>",
+      "css": ".ds-submit { width: 100%; height: 40px; border: 0; border-radius: 8px; background: #f46c38; color: #151312; font: 600 13px Poppins, sans-serif; cursor: pointer; } .ds-submit:hover { background: #ff7f4d; } .ds-submit:focus-visible { outline: 2px solid #f46c38; outline-offset: 3px; }"
+    }
+  ],
+  "narrative": {
+    "northStar": "The Sawad Folio, Filled With Real Work",
+    "overview": "The Sawad Framer template's layout and visual language carried by the owner's real CV, portrait, projects, roles, tools, and contact details.",
+    "keyCharacteristics": ["Sticky white profile card beside oversized two-tone headings.", "Icon dock centred above the content.", "Alternating white and ghost heading lines.", "Orange and lime feature cards.", "English and Indonesian copy switched in place."],
+    "rules": [
+      {"name": "Two-Tone Rule", "body": "Every display heading pairs a white first line with a ghost second line.", "section": "typography"},
+      {"name": "Sticky Rail Rule", "body": "The profile card sticks at 40px inside a full-height rail; the page must stay overflow-x: clip.", "section": "layout"},
+      {"name": "Ghost Contrast Exception", "body": "Ghost heading lines measure 1.47:1 against the ink ground, matching the reference template. The heading's aria-label carries the full text; raising the ghost to #5e5c60 restores AA.", "section": "color"}
+    ],
+    "dos": ["Keep the 344/696 split and the 120px section rhythm.", "Keep every fact and link traceable to the CV."],
+    "donts": ["Do not import the template's stock project art or invented metrics.", "Do not publish the CV phone number.", "Do not use overflow: hidden on the page shell."]
+  }
+}
