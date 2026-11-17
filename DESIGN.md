@@ -68,13 +68,13 @@ components:
 
 **Creative North Star: "The Sawad Folio, Filled With Real Work"**
 
-The page reproduces the Sawad Framer template's layout and visual language — an ink canvas, a floating icon dock, a sticky white profile card, oversized two-tone display headings, a stat row, two saturated feature cards, and numbered editorial sections. Every word, number, and destination comes from Muhamad Fatah Rozaq's CV and supplied portrait.
+The page reproduces the Sawad Framer template's layout and visual language — an ink canvas, a floating icon dock, a sticky white profile card, oversized two-tone display headings, a stat row, and numbered editorial sections. Every word, number, and destination comes from Muhamad Fatah Rozaq's CV and supplied portrait.
 
 Template sections map to real content: recent projects become the three systems named in the CV, experience becomes the three dated roles, premium tools become six tools the CV lists, design thoughts becomes the four skill groups, and the contact form opens a real email draft.
 
 ## Colors
 
-**Ink (#151312)** is the only page ground. **White** carries headings, card surface, and primary text. **Muted (#998F8F)** carries secondary copy. **Burnt orange (#F46C38)** is reserved for icons, dates, number markers, arrows, and the submit button. **Lime (#C5FF41)** appears only on the second feature card and its hover states.
+**Ink (#151312)** is the only page ground. **White** carries headings, card surface, and primary text. **Muted (#998F8F)** carries secondary copy. **Burnt orange (#F46C38)** is reserved for icons, dates, number markers, arrows, and the submit button. **Lime (#C5FF41)** appears on the second project tile and tool hover states.
 
 The ghost colour (`rgb(182 180 189 / 20%)`) paints the second line of every display heading. It is the reference template's own value and measures 1.47:1 against the ink ground — below the 3:1 large-text threshold. The heading's full text is exposed through `aria-label`, so assistive technology reads "Recent projects" rather than "Recent". This is a deliberate, documented reference-fidelity exception; raising the value to `#5e5c60` restores AA compliance at the cost of a lighter second line.
 
@@ -85,7 +85,7 @@ The ghost colour (`rgb(182 180 189 / 20%)`) paints the second line of every disp
 - **Display** 110px/1, 700: the hero's SOFTWARE / ENGINEER lockup.
 - **Section title** 90px/1, 700: two lines, first white, second ghost.
 - **Entry title** 26px/1.2, 600: company, project, tool, and skill-group names.
-- **Lead** 18px/1.4: the hero paragraph, capped at 480px.
+- **Lead** 18px/1.4: the hero summary, spanning the full content column so its line length matches the display heading above it.
 - **Body** 16px/1.4: role summaries and skill lists.
 - **Label** 14px: dates, tool kinds, field labels, project meta.
 - **Stat number** 70px/1.2, 600 with -0.01em tracking.
@@ -100,11 +100,11 @@ The ghost colour (`rgb(182 180 189 / 20%)`) paints the second line of every disp
 
 Sections start 120px apart. Each heading is followed by 20px before its content. Work rows are 175px tall (135px thumbnail + 20px padding), experience entries are 44px apart, and tool rows use a 44×40 grid gap.
 
-Below 1180px the rail narrows to 300px and the type scales down. Below 1000px the layout stacks: card first, then a centred hero and centred section headings. Below 640px the dock keeps its 48px height with tighter gaps, the photo becomes 260×210, work thumbnails shrink to 96px, features stack, and the form switches to one column.
+Below 1180px the rail narrows to 300px and the type scales down. Below 1000px the layout stacks: card first, then a centred hero and centred section headings. Below 640px the dock keeps its 48px height with tighter gaps, the photo becomes 260×210, work thumbnails shrink to 96px, and the form switches to one column.
 
 ## Motion
 
-Interaction only: 140ms colour transitions on dock items and 160ms arrow nudges on the feature cards. The reference's entrance animations are not reproduced because the page is a real portfolio, not a template demo. `prefers-reduced-motion` disables every transition and smooth scrolling.
+Interaction only: 140ms colour transitions on dock items. The reference's entrance animations are not reproduced because the page is a real portfolio, not a template demo. `prefers-reduced-motion` disables every transition and smooth scrolling.
 
 ## Components
 
@@ -114,8 +114,8 @@ Five icon links (home, projects, experience, tools, contact) at 36×36 hit areas
 ### Profile card
 White sheet, radius 16, padding 30/20, gap 22. Contains the supplied portrait (240×284, radius 16), a dashed orange arc at the top-left and bottom-left, an orange sparkle badge over the portrait's left edge, the name, a two-line bio, three orange links (email, LinkedIn, résumé), and a two-segment EN / ID switch.
 
-### Feature cards
-Orange and lime panels, radius 10, padding 40/20/22, 240px tall, a 26px asterisk mark, 24px/1.1 text, and a bordered ↗ square at the bottom-right. They link to the experience and tools sections.
+### Feature cards (currently commented out)
+Orange and lime panels, radius 10, padding 40/20/22, 240px tall, a 26px asterisk mark, 24px/1.1 text, and a bordered ↗ square at the bottom-right. Hidden at the user's request; the markup and `features` copy stay in `app/page.tsx` for re-enabling.
 
 ### Work row
 135px rounded tile (orange, lime, or paper) with a 40px monogram, a 26px title, a 16px summary, and a 14px stack label at the right edge.

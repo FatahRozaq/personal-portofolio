@@ -8,11 +8,11 @@ Content rules: the supplied CV and portrait are the only sources of facts and im
 
 THESIS: Sawad's layout and visual language, carried by Muhamad Fatah Rozaq's real career: a sticky identity card beside oversized two-tone headings.
 
-OWN-WORLD: Ink ground #151312, Poppins, a translucent icon dock, a white sticky profile sheet with dashed orange arcs, a 110px SOFTWARE / ENGINEER lockup whose second line is ghost grey, a 70px stat row, an orange and a lime feature card, and numbered editorial sections separated by 120px.
+OWN-WORLD: Ink ground #151312, Poppins, a translucent icon dock, a white sticky profile sheet with dashed orange arcs, a 110px SOFTWARE / ENGINEER lockup whose second line is ghost grey, a 70px stat row, and numbered editorial sections separated by 120px. The orange and lime feature cards are commented out at the user's request.
 
 STORY: See the portrait and role, read the bio, scan two years across three companies, browse three systems, six tools, four skill groups, then send an email through a working form.
 
-FIRST VIEWPORT: Dock at top-centre; 344px profile card at x=150 starting at y=40; content column at x=594 starting at y=160 with the 110px hero lockup, 18px lead, three stats, and two 240px feature cards.
+FIRST VIEWPORT: Dock at top-centre; 344px profile card at x=150 starting at y=40; content column at x=594 starting at y=160 with the 110px hero lockup, 18px lead, and three stats; the feature cards below them are currently commented out.
 
 FORM: The reference's composition, reproduced with measured values: 1140px shell, 344 + 100 + 696 split, 90px section titles, 135px project thumbnails, 46px tool tiles, 40px fields, 40px orange submit, 16px card radius.
 

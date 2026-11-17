@@ -133,8 +133,8 @@ img { display: block; }
   pointer-events: none;
 }
 .arc path { fill: none; }
-.arc-a { top: -6px; left: -12px; }
-.arc-b { bottom: 6px; left: -20px; width: 100px; opacity: 0.85; }
+.arc-a { top: 2px; left: 2px; }
+.arc-b { bottom: 8px; left: 2px; width: 100px; opacity: 0.85; }
 
 .avatar { position: relative; width: 240px; max-width: 100%; }
 
@@ -219,7 +219,7 @@ img { display: block; }
 .ghost { color: var(--ghost); }
 
 .lead {
-  max-width: 480px;
+  max-width: none;
   margin: 12px 0 0;
   color: var(--muted);
   font-size: 18px;

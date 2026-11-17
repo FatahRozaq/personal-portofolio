@@ -53,15 +53,15 @@ const copy: Record<Language, Copy> = {
     cvLabel: "Download résumé",
     heroTitle: ["SOFTWARE", "ENGINEER"],
     heroLabel: "Software engineer",
-    lead: "I build systems that make day-to-day business operations clearer, from sales workflows and warehousing to dashboards and internal tools.",
+    lead: "Software Engineer with 2 years of experience developing end-to-end business operational systems. Experienced in building Sales Force Automation, Business Intelligence, Warehousing, and Management Systems. Proficient in Golang, Next.js, Laravel, Spring Boot, and Flutter, with a solid understanding of both microservices and monolithic architectures. Skilled in system analysis, including Software Requirements Specification (SRS) documentation and UML diagram development.",
     stats: [
       { value: "+2", label: "YEARS OF EXPERIENCE" },
       { value: "+3", label: "COMPANIES" },
       { value: "+4", label: "SKILL AREAS" },
     ],
     features: [
-      { title: "BUSINESS INTELLIGENCE, SALES FORCE AUTOMATION", href: "#experience" },
-      { title: "GO, NEXT.JS, LARAVEL, POSTGRESQL", href: "#tools" },
+      { title: "Fullstack Developer + Mobile", href: "#experience" },
+      { title: "System Analyst", href: "#tools" },
     ],
     headings: {
       projects: ["RECENT", "PROJECTS"],
@@ -72,25 +72,25 @@ const copy: Record<Language, Copy> = {
     },
     projectList: [
       {
-        title: "Go AI Chatbot",
-        summary: "DeepSeek and OpenAI assistant wired into internal company workflows.",
-        mark: "AI",
+        title: "Sales Force Automation",
+        summary: "Sales, invoice, credit, warehouse, incentives, approvals, and visit workflows built with Go, Next.js, and microservices.",
+        mark: "SFA",
         tone: "orange",
+        meta: "Go",
+      },
+      {
+        title: "Business Intelligence",
+        summary: "SQL reporting for sales, credit, receivables, and employee productivity, with an AI chatbot built on DeepSeek and OpenAI.",
+        mark: "BI",
+        tone: "lime",
         meta: "Go",
       },
       {
         title: "Padel Scoring & Tournament",
         summary: "Scoring, tournament brackets, and results for an internal padel league.",
         mark: "P",
-        tone: "lime",
-        meta: "Next.js",
-      },
-      {
-        title: "Business Intelligence Dashboards",
-        summary: "Laravel and React dashboards with SQL reporting for sales, credit, and receivables.",
-        mark: "BI",
         tone: "paper",
-        meta: "Laravel",
+        meta: "Next.js",
       },
     ],
     jobList: [
@@ -163,15 +163,15 @@ const copy: Record<Language, Copy> = {
     cvLabel: "Unduh CV",
     heroTitle: ["SOFTWARE", "ENGINEER"],
     heroLabel: "Software engineer",
-    lead: "Saya membangun sistem yang membuat operasional bisnis sehari-hari lebih jelas, dari alur penjualan dan gudang hingga dashboard serta aplikasi internal.",
+    lead: "Software Engineer dengan pengalaman 2 tahun mengembangkan sistem operasional bisnis end-to-end. Berpengalaman membangun Sales Force Automation, Business Intelligence, Warehousing, dan Management Systems. Menguasai Golang, Next.js, Laravel, Spring Boot, dan Flutter, dengan pemahaman yang kuat tentang arsitektur microservices maupun monolith. Terampil dalam analisis sistem, termasuk penyusunan Software Requirements Specification (SRS) dan UML diagram.",
     stats: [
       { value: "+2", label: "TAHUN PENGALAMAN" },
       { value: "+3", label: "PERUSAHAAN" },
       { value: "+4", label: "BIDANG KEAHLIAN" },
     ],
     features: [
-      { title: "BUSINESS INTELLIGENCE, SALES FORCE AUTOMATION", href: "#experience" },
-      { title: "GO, NEXT.JS, LARAVEL, POSTGRESQL", href: "#tools" },
+      { title: "Fullstack Developer + Mobile", href: "#experience" },
+      { title: "System Analyst", href: "#tools" },
     ],
     headings: {
       projects: ["PROYEK", "TERBARU"],
@@ -182,25 +182,25 @@ const copy: Record<Language, Copy> = {
     },
     projectList: [
       {
-        title: "Chatbot AI Go",
-        summary: "Asisten DeepSeek dan OpenAI yang terhubung ke alur kerja internal perusahaan.",
-        mark: "AI",
+        title: "Sales Force Automation",
+        summary: "Alur penjualan, faktur, kredit, gudang, insentif, persetujuan, dan kunjungan karyawan dengan Go, Next.js, dan microservices.",
+        mark: "SFA",
         tone: "orange",
+        meta: "Go",
+      },
+      {
+        title: "Business Intelligence",
+        summary: "Laporan SQL untuk penjualan, kredit, piutang, dan produktivitas karyawan, termasuk chatbot AI berbasis DeepSeek dan OpenAI.",
+        mark: "BI",
+        tone: "lime",
         meta: "Go",
       },
       {
         title: "Skor & Turnamen Padel",
         summary: "Pencatatan skor, bagan turnamen, dan hasil untuk liga padel internal.",
         mark: "P",
-        tone: "lime",
-        meta: "Next.js",
-      },
-      {
-        title: "Dashboard Business Intelligence",
-        summary: "Dashboard Laravel dan React dengan laporan SQL untuk penjualan, kredit, dan piutang.",
-        mark: "BI",
         tone: "paper",
-        meta: "Laravel",
+        meta: "Next.js",
       },
     ],
     jobList: [
@@ -340,7 +340,7 @@ export default function Home() {
             </div>
 
             <p className="profile-name">{t.name}</p>
-            <p className="profile-bio">{t.bio}</p>
+            {/* <p className="profile-bio">{t.bio}</p> */}
 
             <div aria-label={t.contactLabel} className="profile-links" role="group">
               <a aria-label="Email fatah.rozaq20@gmail.com" href="mailto:fatah.rozaq20@gmail.com"><Icon name="mail" /></a>
@@ -370,13 +370,16 @@ export default function Home() {
             </ul>
             <div className="features">
               {t.features.map((feature, index) => (
-                <a className={`feature feature--${index === 0 ? "orange" : "lime"}`} href={feature.href} key={feature.title}>
+                <a className={`feature feature--${index === 0 ? "orange" : "lime"}`} 
+                // href={feature.href} 
+                key={feature.title}>
                   <svg aria-hidden="true" className="feature-mark" fill="none" height="26" stroke="currentColor" strokeWidth="1.7" viewBox="0 0 24 24" width="26"><path d="M12 3v18M3 12h18M5.6 5.6l12.8 12.8M18.4 5.6 5.6 18.4" /></svg>
                   <p>{feature.title}</p>
-                  <span aria-hidden="true" className="feature-arrow">↗</span>
+                  {/* <span aria-hidden="true" className="feature-arrow">↗</span> */}
                 </a>
               ))}
             </div>
+           
           </section>
 
           <section className="section" id="projects">
