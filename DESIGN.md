@@ -112,10 +112,10 @@ Interaction only: 140ms colour transitions on dock items. The reference's entran
 Five icon links (home, projects, experience, tools, contact) at 36×36 hit areas inside a 48px translucent pill. Each has `aria-label` and `title`; icons are decorative SVG.
 
 ### Profile card
-White sheet, radius 16, padding 30/20, gap 22. Contains the supplied portrait (240×284, radius 16), a dashed orange arc at the top-left and bottom-left, an orange sparkle badge over the portrait's left edge, the name, a two-line bio, three orange links (email, LinkedIn, résumé), and a two-segment EN / ID switch.
+White sheet, radius 16, padding 30/20, gap 22. Contains the supplied portrait (240×284, radius 16), a dashed orange arc at the top-left and bottom-left, an orange sparkle badge over the portrait's left edge, the name, four orange links (email, LinkedIn, GitHub, résumé), and a two-segment EN / ID switch.
 
-### Feature cards (currently commented out)
-Orange and lime panels, radius 10, padding 40/20/22, 240px tall, a 26px asterisk mark, 24px/1.1 text, and a bordered ↗ square at the bottom-right. Hidden at the user's request; the markup and `features` copy stay in `app/page.tsx` for re-enabling.
+### Feature cards
+Orange and lime panels, radius 10, padding 40/20/22, 240px tall, a 26px asterisk mark, 24px/1.1 text. They currently render as two role labels, "Fullstack Developer + Mobile" and "System Analyst", with the link and arrow removed.
 
 ### Work row
 135px rounded tile (orange, lime, or paper) with a 40px monogram, a 26px title, a 16px summary, and a 14px stack label at the right edge.
